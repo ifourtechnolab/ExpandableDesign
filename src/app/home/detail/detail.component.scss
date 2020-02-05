@@ -1,0 +1,110 @@
+:host {
+    ion-grid.content {
+      padding: 20px 10px 10px 10px;
+  
+      > ion-row {
+          > ion-col {
+              padding: 0px 10px;
+          }
+        }
+    }
+  
+    ion-card {
+        margin: 0;
+        margin-bottom: 20px;
+  
+        &.insure_list {
+          padding: 15px 10px 3px 10px !important;
+          border: 0;
+          border-top: 1px solid #f1f1f1;
+          box-shadow: none;
+          border-radius: 0;
+        }
+    }
+  
+    ion-text {
+      &.header {
+        font-size: 16px;
+        padding: 10px 15px;
+        display: flex;
+        margin: 0;
+        justify-content: space-between;
+        color: var(--ion-color-light);
+        background: var(--ion-color-primary);
+        
+        img {
+          width: 17px;
+          height: 17px;
+          margin-top: 3px;
+        }
+      }
+  
+      &.subText {
+        font-size: 14px;
+        padding: 0;
+        margin-left: 10px;
+        display: block;
+      }
+      cursor: pointer;
+      position: relative;
+      padding: 1em 0.35em;
+      margin: 0;
+  
+      span {
+         position: absolute;
+         right: 1em;
+         top: 1.2em;
+         font-size: 0.95em;
+      }
+    }
+  
+    .information {
+      display: flex;
+      margin-bottom: 10px;
+      margin-right: 6px;
+    }
+  
+    .active {
+      display: block;
+      padding: 15px;
+    }
+    
+    .inActive {
+      display: none;
+    }
+  
+    .profile {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      margin-bottom: 25px;
+    } 
+  
+    ion-thumbnail { 
+      --border-radius: 50%;
+      border: 1px solid rgba(var(--ion-color-dark-contrast-rgb), 0.1);
+      width: 60px;
+      height: 60px;
+      padding: 2px;
+      margin-right: 10px;
+      max-width: 60px;
+    }
+    
+    .username {
+      white-space: pre-wrap;
+    }     
+  
+    .card-content-md, .card-content-ios {
+        padding: 0px !important;
+    }
+
+    #child-card {
+      padding: 5px;
+      margin-bottom: 2px
+    }
+
+    ion-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

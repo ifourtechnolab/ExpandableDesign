@@ -1,0 +1,162 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="light">
+    <ion-buttons slot="start">
+      <ion-back-button size="small" shape="round" color="primary" text="">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Expandable Design
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="content">
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content class="ion-no-margin">
+            <ion-text (click)="isPerInfo = !isPerInfo" color="medium" class="header">
+              Personal Information
+              <img *ngIf="isPerInfo" src="assets/img/up-arrow-w.png" />
+              <img *ngIf="!isPerInfo" src="assets/img/down-arrow-w.png" />
+            </ion-text>
+
+            <div [ngClass]="isPerInfo ? 'active' : 'inActive'" style="position: relative;">
+              <div class="profile">
+                <ion-thumbnail>
+                  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                </ion-thumbnail>
+
+                <div class="username">
+                  <ion-text color="medium" class="subText">Nirav D</ion-text>
+                </div>
+              </div>
+
+              <div class="information mt-2">
+                <ion-icon name="calendar" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">March 8th, 1991</ion-text>
+              </div>
+
+              <div class="information">
+                <ion-icon name="person" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">Male</ion-text>
+              </div>
+
+              <div class="information">
+                <ion-icon name="mail" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">niravd@ifourtechnolab.com</ion-text>
+              </div>
+
+              <div class="information">
+                <ion-icon name="clipboard" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">140125</ion-text>
+              </div>
+
+              <div class="information">
+                <ion-icon name="phone-portrait" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">+91 9876543210</ion-text>
+              </div>
+
+              <div class="information">
+                <ion-icon name="flask" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">O +ve</ion-text>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content class="ion-no-margin">
+            <ion-text (click)="isEmeInfo = !isEmeInfo" color="medium" class="header">
+              Emergency Information
+              <img *ngIf="isEmeInfo" src="assets/img/up-arrow-w.png" />
+              <img *ngIf="!isEmeInfo" src="assets/img/down-arrow-w.png" />
+            </ion-text>
+
+            <div [ngClass]="isEmeInfo ? 'active' : 'inActive'" style="position: relative;">
+              <div class="information">
+                <ion-icon name="person" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText fw400">Parth</ion-text>
+              </div>
+
+              <div class="information">
+                <ion-icon name="phone-portrait" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText fw400">+91 1234567890</ion-text>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content class="ion-no-margin">
+            <ion-text (click)="isAddress = !isAddress" color="medium" class="header">
+              Address Information
+              <img *ngIf="isAddress" src="assets/img/up-arrow-w.png" />
+              <img *ngIf="!isAddress" src="assets/img/down-arrow-w.png" />
+            </ion-text>
+
+            <div [ngClass]="isAddress ? 'active' : 'inActive'" style="position: relative;">
+              <div class="information">
+                <ion-icon name="pin" color="primary"></ion-icon>
+                <ion-text color="medium" class="subText">
+                  601-612, Time Square, Thaltej, Ahmedabad - 65
+                </ion-text>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content class="ion-no-margin">
+            <ion-text (click)="isEduInfo = !isEduInfo" color="medium" class="header">
+              Education Information
+              <img *ngIf="isEduInfo" src="assets/img/up-arrow-w.png" />
+              <img *ngIf="!isEduInfo" src="assets/img/down-arrow-w.png" />
+            </ion-text>
+
+            <div [ngClass]="isEduInfo ? 'active' : 'inActive'"
+              style="position: relative; max-height: 200px; overflow: auto; padding: 0;" class="mt-3">
+              <ion-card id="child-card" class="insure_list">
+                <div class="information">
+                  <ion-icon name="school" color="primary"></ion-icon>
+                  <ion-text color="medium" class="subText fw400">GTU</ion-text>
+                </div>
+
+                <div class="information">
+                  <ion-icon name="school" color="primary"></ion-icon>
+                  <ion-text color="medium" class="subText fw400">BE (IT)</ion-text>
+                </div>
+
+                <div class="information">
+                  <ion-icon name="calendar" color="primary"></ion-icon>
+                  <ion-text color="medium" class="subText fw400">2012</ion-text>
+                </div>
+              </ion-card>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content class="ion-no-margin">
+            <ion-text (click)="isNotes = !isNotes" color="medium" class="header">
+              Note
+              <img *ngIf="isNotes" src="assets/img/up-arrow-w.png" />
+              <img *ngIf="!isNotes" src="assets/img/down-arrow-w.png" />
+            </ion-text>
+
+            <div [ngClass]="isNotes ? 'active' : 'inActive'" style="position: relative;">
+              <div class="information">
+                <ion-text color="medium" class="subText">
+                  I am working as a Sr. Software Developer. I have to worked on iOS native app and also working on
+                  hybrid platform like ionic.
+                </ion-text>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
